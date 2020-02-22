@@ -3,10 +3,10 @@
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES' ? {
     router: {
-      base: '/<harasya.github.io>/'
+      base: '/harasya.github.io/'
     }
   } : {}
-console.log(process.env.DEPLOY_ENV)
+
 export default {
   mode: 'universal',
   /*
