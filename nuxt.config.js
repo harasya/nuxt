@@ -1,13 +1,12 @@
 /* nuxt.config.js */
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/harasya.github.io/'
-        }
-      }
-    : {}
+  process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    router: {
+      base: '/<harasya.github.io>/'
+    }
+  } : {}
+console.log(process.env.DEPLOY_ENV)
 export default {
   mode: 'universal',
   /*
@@ -15,8 +14,7 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -29,13 +27,11 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
   },
   /*
    ** Customize the progress-bar color
