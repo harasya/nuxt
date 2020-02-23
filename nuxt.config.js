@@ -1,11 +1,6 @@
+/* eslint-disable prettier/prettier */
 /* nuxt.config.js */
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-    router: {
-      base: '/harasya.github.io/'
-    }
-  } : {}
 
 export default {
   mode: 'universal',
@@ -14,7 +9,8 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -27,11 +23,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -78,6 +76,5 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  ...routerBase
+  }
 }
