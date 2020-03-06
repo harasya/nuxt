@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-100">
     <nuxt />
   </div>
 </template>
@@ -16,13 +16,24 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+/* html,
+body {
+  background-color: #e3e3e3;
+  height: 100%;
+} */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
 }
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+/* .h-100 {
+  height: 100%;
+} */
 
 .button--green {
   display: inline-block;
@@ -52,4 +63,9 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+/* .bg-dark {
+  background-color: #404040;
+  color: #fff;
+} */
 </style>

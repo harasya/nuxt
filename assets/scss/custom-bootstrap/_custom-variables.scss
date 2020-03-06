@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$grid-columns: 24;
+
+html,
+body {
+  background-color: #e3e3e3 !important;
+  height: 100%;
+}

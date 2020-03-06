@@ -1,0 +1,14 @@
+/* -------begin customization-------- */
+/* change the primary theme color to red */
+/* functions base variables and mixins */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "custom-bootstrap/custom-variables";
+
+/* -------end customization-------- */
+/* finally, import Bootstrap to set the changes! */
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import 'bootstrap-vue/src/index.scss';
